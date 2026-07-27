@@ -226,6 +226,21 @@ footer{background:linear-gradient(155deg,var(--bleu) 0%,var(--bleu-nuit) 100%);c
 }
 </style>
 <style>
+/* ===== Complément : grille de 6 cartes ===== */
+.grid .kpi,
+.grid .kpi:nth-child(4),
+.grid .kpi:nth-child(5){grid-column:span 2}
+@media (max-width:1080px){
+  .grid .kpi,
+  .grid .kpi:nth-child(4),
+  .grid .kpi:nth-child(5){grid-column:span 3}
+}
+@media (max-width:720px){
+  .grid .kpi,
+  .grid .kpi:nth-child(4),
+  .grid .kpi:nth-child(5){grid-column:auto}
+}
+
 /* ===== Complément : graphiques ===== */
 .charts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
 .chart-card{background:var(--surface);border:1px solid var(--bord);border-radius:var(--r);padding:20px 22px;box-shadow:var(--ombre-s);animation:rise .55s .2s cubic-bezier(.16,1,.3,1) both}
